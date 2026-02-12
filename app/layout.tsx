@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Noto_Sans_Arabic, Montserrat } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
-import { ThemeProvider } from '@/components/providers'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
@@ -26,16 +23,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${montserrat.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
       <body className="bg-white text-gray-900 antialiased font-sans" suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )

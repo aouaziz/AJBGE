@@ -115,6 +115,9 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "shimmer": {
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,6 +125,7 @@ export default {
         "caret-blink": "caret-blink 1.25s ease-out infinite",
         "float": "float 4s ease-in-out infinite",
         "scroll": "scroll 30s linear infinite",
+        "shimmer": "shimmer 2s infinite",
       },
     },
   },
