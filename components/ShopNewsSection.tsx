@@ -52,14 +52,14 @@ export const ShopNewsSection = () => {
   ];
 
   return (
-    <div className="bg-black">
+    <div className="bg-gray-50">
       {/* Shop Section */}
       <section className="relative px-8 py-32 md:px-16 lg:px-24 xl:px-32 max-w-[1800px] mx-auto">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '50px 50px'
+            backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
+            backgroundSize: '40px 40px'
           }} />
         </div>
 
@@ -71,16 +71,16 @@ export const ShopNewsSection = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 relative z-10"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-[2px] w-20 bg-[#059669]" />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-[2px] w-16 bg-[#059669]" />
             <span className="text-[#059669] text-[10px] font-extrabold tracking-[0.25em] uppercase">
               COLLECTION PREMIUM
             </span>
           </div>
-          <h2 className="text-white uppercase mb-6 font-black leading-tight tracking-[0.02em] text-[clamp(2.5rem,5vw,4.5rem)]">
-            BOUTIQUE <span className="text-[#059669]">EXCLUSIVE</span>
+          <h2 className="text-gray-900 uppercase mb-6 font-black leading-tight tracking-tight text-5xl md:text-7xl">
+            BOUTIQUE <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#047857]">EXCLUSIVE</span>
           </h2>
-          <p className="text-white/50 text-base leading-relaxed max-w-[700px] font-medium">
+          <p className="text-gray-500 text-lg leading-relaxed max-w-2xl font-medium">
             Découvrez notre sélection d'équipements d'échecs premium pour les joueurs exigeants
           </p>
         </motion.div>
@@ -99,21 +99,18 @@ export const ShopNewsSection = () => {
         </div>
       </section>
 
-      {/* Divider with Emerald Glow */}
-      <div className="px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1800px] mx-auto py-16">
-        <div className="relative h-[1px]">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#059669] to-transparent opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#059669] to-transparent blur-xl opacity-30" />
-        </div>
+      {/* Divider */}
+      <div className="max-w-[1800px] mx-auto px-8">
+         <div className="h-px bg-gray-200 w-full" />
       </div>
 
       {/* Club News & Features Section */}
       <section className="relative px-8 py-32 md:px-16 lg:px-24 xl:px-32 max-w-[1800px] mx-auto">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '50px 50px'
+            backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
+            backgroundSize: '40px 40px'
           }} />
         </div>
 
@@ -125,16 +122,16 @@ export const ShopNewsSection = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 relative z-10"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-[2px] w-20 bg-[#059669]" />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-[2px] w-16 bg-[#059669]" />
             <span className="text-[#059669] text-[10px] font-extrabold tracking-[0.25em] uppercase">
               ÉDITORIAL
             </span>
           </div>
-          <h2 className="text-white uppercase mb-6 font-black leading-tight tracking-[0.02em] text-[clamp(2.5rem,5vw,4.5rem)]">
-            ACTUALITÉS & <span className="text-[#059669]">REPORTAGES</span>
+          <h2 className="text-gray-900 uppercase mb-6 font-black leading-tight tracking-tight text-5xl md:text-7xl">
+            ACTUALITÉS & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#047857]">REPORTAGES</span>
           </h2>
-          <p className="text-white/50 text-base leading-relaxed max-w-[700px] font-medium">
+          <p className="text-gray-500 text-lg leading-relaxed max-w-2xl font-medium">
             Plongez dans les dernières histoires, conseils et profils du monde des échecs
           </p>
         </motion.div>

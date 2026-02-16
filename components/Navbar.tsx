@@ -19,7 +19,7 @@ export const Navbar = () => {
         <img 
           src="logo.png"
           alt="AJBGE Logo" 
-          className="h-10 w-auto object-contain brightness-0 invert" 
+          className="h-10 w-auto object-contain" 
         />
         <span className="text-white text-lg font-black tracking-tighter">AJBGE</span>
       </div>

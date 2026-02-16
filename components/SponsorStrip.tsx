@@ -5,55 +5,80 @@ import { motion } from 'motion/react';
 
 export const SponsorStrip = () => {
   const sponsors = [
-    { name: "OCP Group", industry: "Phosphate & Fertilizer" },
-    { name: "Maroc Telecom", industry: "Telecommunications" },
-    { name: "Attijariwafa Bank", industry: "Banking & Finance" },
-    { name: "Royal Air Maroc", industry: "Airlines" },
-    { name: "BCP", industry: "Banking" },
-    { name: "Afriquia", industry: "Energy & Gas" },
-    { name: "ONCF", industry: "Railway" },
-    { name: "Bank of Africa", industry: "Finance" },
-    { name: "Cosumar", industry: "Sugar Industry" },
+    { 
+      name: "OCP Group", 
+      logoUrl: "https://www.start-up.ma/wp-content/uploads/2023/10/OCP-Group-l-Start-Up-1-1-1-1-1-1-1.png",
+      height: 200 
+    },
+    { 
+      name: "Chess.com", 
+      logoUrl: "https://logowik.com/content/uploads/images/chesscom2309.logowik.com.webp",
+      height: 150 
+    },
+     { 
+      name: "OCP Group", 
+      logoUrl: "https://www.start-up.ma/wp-content/uploads/2023/10/OCP-Group-l-Start-Up-1-1-1-1-1-1-1.png",
+      height: 200 
+    },
+    { 
+      name: "Chess.com", 
+      logoUrl: "https://logowik.com/content/uploads/images/chesscom2309.logowik.com.webp",
+      height: 150 
+    },
+    // Repeats for effect
+    { 
+      name: "OCP Group", 
+      logoUrl: "https://www.start-up.ma/wp-content/uploads/2023/10/OCP-Group-l-Start-Up-1-1-1-1-1-1-1.png",
+      height: 200 
+    },
+    { 
+      name: "Chess.com", 
+      logoUrl: "https://logowik.com/content/uploads/images/chesscom2309.logowik.com.webp",
+      height: 150 
+    },
   ];
 
   // Double the array for seamless infinite loop
   const duplicatedSponsors = [...sponsors, ...sponsors];
 
   return (
-    <div className="absolute bottom-0 left-0 w-full z-30 py-10 overflow-hidden">
-      <motion.div 
-        className="flex items-center"
-        animate={{
-          x: [0, -1800], // Adjusted for the width of text logos
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 40, // Slower, more premium movement
-            ease: "linear",
-          },
-        }}
-      >
-        {duplicatedSponsors.map((sponsor, idx) => (
-          <div 
-            key={`${sponsor.name}-${idx}`} 
-            className="flex-shrink-0 px-10 flex flex-col items-center justify-center group cursor-pointer"
+    <div className="w-full bg-white  border-b border-gray-100 overflow-hidden relative">
+      <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+      <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+      
+      <div className="max-w-[1800px] mx-auto px-8">
+        
+        <div className="flex overflow-hidden">
+          <motion.div 
+            className="flex items-center gap-24"
+            animate={{
+              x: [0, -1000],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 30,
+                ease: "linear",
+              },
+            }}
           >
-            <div className="flex items-center justify-center transition-all duration-500">
-              <span className="text-sm font-black tracking-widest text-white uppercase group-hover:text-white/100 transition-all duration-500">
-                {sponsor.name.split(' ')[0]}
-                <span className="text-white/30 font-bold ml-1">
-                  {sponsor.name.split(' ').slice(1).join(' ')}
-                </span>
-              </span>
-            </div>
-            <span className="mt-1 text-[6px] font-bold uppercase tracking-[0.3em] text-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500">
-              {sponsor.industry}
-            </span>
-          </div>
-        ))}
-      </motion.div>
+            {duplicatedSponsors.map((sponsor, idx) => (
+              <div 
+                key={`${sponsor.name}-${idx}`} 
+                className="flex-shrink-0 group cursor-pointer grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 scale-95 hover:scale-105"
+              >
+                <img 
+                  src={sponsor.logoUrl} 
+                  alt={sponsor.name}
+                  style={{ height: `${sponsor.height}px`, width: 'auto' }}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

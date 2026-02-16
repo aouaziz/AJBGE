@@ -18,46 +18,38 @@ export function ProductCard({ imageUrl, name, price, description }: ProductCardP
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -8 }}
-      className="group relative overflow-hidden bg-black cursor-pointer transition-all duration-500 border border-white/5 hover:border-[#059669]/50 hover:shadow-2xl hover:shadow-[#059669]/20"
+      className="group relative overflow-hidden bg-white cursor-pointer transition-all duration-500 border border-gray-100 hover:border-[#059669]/50 hover:shadow-2xl hover:shadow-[#059669]/10 rounded-xl"
     >
       {/* Image */}
-      <div className="aspect-square overflow-hidden bg-neutral-900">
+      <div className="aspect-square overflow-hidden bg-gray-100 relative">
         <img
           src={imageUrl}
           alt={name}
-          className="size-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-90"
+          className="size-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
         />
+        {/* Overlay gradient for text contrast if needed, but keeping it clean for now */}
       </div>
       
       {/* Product Info */}
-      <div className="bg-black p-8 border-t border-white/5">
-        <h3 className="uppercase tracking-[0.2em] mb-3" style={{ 
-          color: '#FFFFFF', 
-          fontWeight: 800, 
-          fontSize: '12px'
-        }}>
+      <div className="bg-white p-6 border-t border-gray-100">
+        <h3 className="uppercase tracking-[0.1em] mb-2 text-gray-900 font-extrabold text-xs">
           {name}
         </h3>
-        <p className="text-white/50 text-xs mb-6 leading-relaxed font-medium">
+        <p className="text-gray-500 text-xs mb-6 leading-relaxed font-medium line-clamp-2">
           {description}
         </p>
-        <div className="flex items-center justify-between pt-4 border-t border-white/5">
-          <span style={{ 
-            fontSize: '28px', 
-            fontWeight: 900, 
-            letterSpacing: '-0.02em',
-            color: '#059669'
-          }}>
+        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+          <span className="text-2xl font-black tracking-tight text-[#059669]">
             {price}
           </span>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#059669] text-white px-6 py-3 flex items-center gap-2 transition-all hover:bg-[#047857] shadow-lg shadow-[#059669]/20 group/btn"
-            style={{ fontSize: '10px', letterSpacing: '0.15em', fontWeight: 800 }}
+            className="bg-[#059669] text-white px-5 py-2.5 flex items-center gap-2 transition-all hover:bg-[#047857] shadow-lg shadow-[#059669]/20 group/btn rounded-lg"
+            style={{ fontSize: '10px', letterSpacing: '0.05em', fontWeight: 800 }}
           >
-            <ShoppingCart className="size-4" />
+            <ShoppingCart className="size-3.5" />
             <span>AJOUTER</span>
           </motion.button>
         </div>
