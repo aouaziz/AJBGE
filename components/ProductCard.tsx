@@ -18,7 +18,7 @@ export function ProductCard({ imageUrl, name, price, description }: ProductCardP
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -8 }}
-      className="group relative overflow-hidden bg-white cursor-pointer transition-all duration-500 border border-gray-100 hover:border-[#059669]/50 hover:shadow-2xl hover:shadow-[#059669]/10 rounded-xl"
+      className="group relative overflow-hidden bg-white cursor-pointer transition-all duration-500 border border-gray-100 hover:border-gray-200 rounded-xl"
     >
       {/* Image */}
       <div className="aspect-square overflow-hidden bg-gray-100 relative">
@@ -46,7 +46,7 @@ export function ProductCard({ imageUrl, name, price, description }: ProductCardP
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#059669] text-white px-5 py-2.5 flex items-center gap-2 transition-all hover:bg-[#047857] shadow-lg shadow-[#059669]/20 group/btn rounded-lg"
+            className="bg-[#059669] text-white px-5 py-2.5 flex items-center gap-2 transition-all hover:bg-[#047857] rounded-[5px]"
             style={{ fontSize: '10px', letterSpacing: '0.05em', fontWeight: 800 }}
           >
             <ShoppingCart className="size-3.5" />

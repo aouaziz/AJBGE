@@ -73,9 +73,9 @@ export const Footer = () => {
                 <input 
                     type="email" 
                     placeholder="Enter your email" 
-                    className="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#059669] transition-colors"
+                    className="bg-white/5 border border-white/10 rounded-[5px] px-4 py-3 text-sm focus:outline-none focus:border-[#059669] transition-colors"
                 />
-                <button className="bg-[#059669] text-white text-xs font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-[#047857] transition-all shadow-lg hover:shadow-[#059669]/20">
+                <button className="bg-[#059669] text-white text-xs font-bold uppercase tracking-widest py-3 rounded-[5px] hover:bg-[#047857] transition-all">
                     Subscribe
                 </button>
             </div>

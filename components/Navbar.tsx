@@ -13,7 +13,8 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-12 py-6 bg-transparent">
+    <nav className="fixed top-0 left-0 w-full z-50 py-6 bg-transparent">
+      <div className="flex items-center justify-between px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1800px] mx-auto w-full">
       {/* Left: Logo */}
       <div className="flex items-center gap-3">
         <img 
@@ -42,10 +43,11 @@ export const Navbar = () => {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-7 py-2 rounded-full bg-[#059669] text-white text-[12px] font-black tracking-widest hover:bg-[#047857] transition-all uppercase shadow-lg shadow-emerald-900/20"
+        className="px-7 py-2 rounded-[5px] bg-[#059669] text-white text-[12px] font-bold tracking-widest hover:bg-[#047857] transition-all uppercase"
       >
         Inscription
       </motion.button>
+      </div>
     </nav>
   );
 };

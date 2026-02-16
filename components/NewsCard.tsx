@@ -17,7 +17,7 @@ export function NewsCard({ imageUrl, title, ctaText }: NewsCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -8 }}
-      className="group relative overflow-hidden cursor-pointer transition-all duration-500 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-[#059669]/20"
+      className="group relative overflow-hidden cursor-pointer transition-all duration-500 rounded-xl hover:shadow-md border border-gray-100"
     >
       {/* Image */}
       <div className="aspect-[3/4] overflow-hidden bg-gray-100">
